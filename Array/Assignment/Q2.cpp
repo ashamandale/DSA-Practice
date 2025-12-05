@@ -16,7 +16,7 @@ int searchInRotatedSortedArray(int *arr,int n, int target){
         
         //checking left half is sorted or not
         if(arr[start]<=arr[mid]){
-            if(arr[start]<=target && target <=arr[mid]){
+            if(arr[start]<=target && target <arr[mid]){
                 end=mid-1;   //search in left half.
             }
             else{
