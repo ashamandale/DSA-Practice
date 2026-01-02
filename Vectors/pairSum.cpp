@@ -1,4 +1,4 @@
-//Pairsum using two pointers
+//Pairsum using two pointers ,Array is sorted
 #include<iostream>
 #include<vector>
 using namespace std;
