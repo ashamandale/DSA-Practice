@@ -1,9 +1,8 @@
-//Print Subarray sum using Brute Force)
+
 
 #include<iostream>
 using namespace std;
 
-//Brute force
 void maxSubarraySum(int *arr,int n){
     int maxSum= INT16_MIN;
     for(int start=0;start<n;start++){
@@ -22,7 +21,7 @@ void maxSubarraySum(int *arr,int n){
 }
 
 
-//slightly optimized
+
 void maxSubarraySum2(int *arr,int n){
     int maxSum= INT16_MIN;
     for(int start=0;start<n;start++){
