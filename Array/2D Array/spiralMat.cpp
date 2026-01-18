@@ -1,51 +1,68 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
-void spiralMatrix2(int mat[][4],int n, int m){
-    int srow=0,scol=0;
-    int erow=n-1,ecol=m-1;
 
- while(srow<=erow && scol<=ecol){
-        //top
-     for(int j=scol;j<=ecol;j++){
-        cout<<mat[srow][j]<<" ";
-     }
-    //right
-     for(int i=srow+1;i<=erow;i++){
-        cout<<mat[i][ecol]<<" ";
-     }
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        vector<int> ans;
+        int n = matrix.size();
+        int m = matrix[0].size();
 
-    //bottom 
-     for(int j=ecol-1;j>=scol;j--){
-        if(srow==erow){
-            break;
+        int srow = 0, scol = 0;
+        int erow = n - 1, ecol = m - 1;
+p
+        while (srow <= erow && scol <= ecol) {
+
+            // Top
+            for (int j = scol; j <= ecol; j++) {
+                ans.push_back(matrix[srow][j]);
+            }
+            srow++;
+
+            // Right
+            for (int i = srow; i <= erow; i++) {
+                ans.push_back(matrix[i][ecol]);
+            }
+            ecol--;
+
+            // Bottom
+            if (srow <= erow) {
+                for (int j = ecol; j >= scol; j--) {
+                    ans.push_back(matrix[erow][j]);
+                }
+                erow--;
+            }
+
+            // Left
+            if (scol <= ecol) {
+                for (int i = erow; i >= srow; i--) {
+                    ans.push_back(matrix[i][scol]);
+                }
+                scol++;
+            }
         }
-        cout<<mat[erow][j]<<" ";
-     }
 
-    //left
-    for(int i=erow-1;i>=srow+1;i--){
-        if(scol==ecol){
-            break;
-        }
-        cout<<mat[i][scol]<<" ";
-     }
-     srow++;
-     scol++;
-     erow--;
-     ecol--;
-  }
-}
-int main(){
-    // int matrix[4][4]={ {1,2,3,4},
-    //                    {5,6,7,8},
-    //                    {9,10,11,12},
-    //                    {13,14,15,16}
-    //                 };
-                    
-     int matrix[3][4]={ {1,2,3,4},
-                       {5,6,7,8},
-                       {9,10,11,12},
-                    };               
-     spiralMatrix2(matrix,3,4);               
-return 0;
+        return ans;
+    }
+};
+
+int main() {
+    Solution obj;
+
+    vector<vector<int>> matrix = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    vector<int> result = obj.spiralOrder(matrix);
+
+    cout << "Spiral Order: ";
+    for (int x : result) {
+        cout << x << " ";
+    }
+    cout << endl;
+
+    return 0;
 }
