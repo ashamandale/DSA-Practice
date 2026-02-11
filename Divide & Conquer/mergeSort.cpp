@@ -26,6 +26,7 @@ void merge(int arr[],int si,int mid, int ei){
     for(int idx=si,x=0;idx<=ei;idx++){
         arr[idx]=temp[x++];
     }
+    
 }
 void mergeSort(int arr[],int si,int ei){
     if(si>=ei){
