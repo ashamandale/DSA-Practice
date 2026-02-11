@@ -1,4 +1,4 @@
-//Quick Sort
+//Quick Sort.
 #include<iostream>
 using namespace std;
 void printArray(int arr[],int n){
