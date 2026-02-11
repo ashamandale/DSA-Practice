@@ -1,4 +1,4 @@
-//Search array using merge sort . 
+//Search array using merge sort. 
 
 #include<iostream>
 #include<vector>
