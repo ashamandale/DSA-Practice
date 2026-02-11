@@ -1,4 +1,4 @@
-//Quick Sort.
+//Quick Sort using recursion
 #include<iostream>
 using namespace std;
 void printArray(int arr[],int n){
