@@ -1,3 +1,5 @@
+//Search array using merge sort
+
 #include<iostream>
 #include<vector>
 using namespace std;
