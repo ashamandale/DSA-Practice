@@ -1,4 +1,4 @@
-//merge Sort
+//merge Sort.
 #include<iostream>
 #include<vector>
 using namespace std;
