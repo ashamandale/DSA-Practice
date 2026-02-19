@@ -1,3 +1,7 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
 class Solution {
 public:
     int countBinarySubstrings(string s) {
@@ -18,3 +22,17 @@ public:
         return ans;
     }
 };
+
+int main() {
+    Solution sol;
+    
+    string s;
+    cout << "Enter binary string: ";
+    cin >> s;
+
+    int result = sol.countBinarySubstrings(s);
+
+    cout << "Number of valid substrings: " << result << endl;
+
+    return 0;
+}
