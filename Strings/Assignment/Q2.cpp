@@ -1,4 +1,4 @@
-//Check if One String Swap Can Make Strings Equal://Leetcode-1790.
+//Check if One String Swap Can Make Strings Equal://Leetcode-1790..
 
 #include<iostream>
 using namespace std;
