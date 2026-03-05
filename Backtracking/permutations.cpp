@@ -1,4 +1,4 @@
-//Permutations to choose  chracter 
+//Permutations to choose  chracter ...
 
 #include<iostream>
 using namespace std;
