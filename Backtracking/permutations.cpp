@@ -1,3 +1,5 @@
+//Permutations to choose  chracter 
+
 #include<iostream>
 using namespace std;
 void permutations(string str,string ans){
