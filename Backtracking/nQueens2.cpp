@@ -1,3 +1,5 @@
+//n-Queens with attack
+
 #include<iostream>
 #include<string>
 #include<vector>
