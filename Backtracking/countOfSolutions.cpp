@@ -1,4 +1,4 @@
-//count of all solutions
+//count of all solutions...
 
 #include<iostream>
 #include<string>
