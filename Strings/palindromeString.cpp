@@ -1,4 +1,4 @@
-//check valid Palindrome string 
+//check valid Palindrome string ..
 
 #include<iostream>
 using namespace std;
