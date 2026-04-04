@@ -1,4 +1,4 @@
-//Given 2D integer array of size n × m, write a program to count and print the total number of occurrences of the number 7 present in the array.
+//Given 2D integer array of size n × m, write a program to count and print the total number of occurrences of the number 7 present in the array...
 
 #include<iostream>
 using namespace std;
