@@ -1,3 +1,4 @@
+//Stack using deque
 #include<iostream>
 #include<queue>
 #include<deque>
