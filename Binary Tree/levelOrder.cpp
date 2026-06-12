@@ -32,11 +32,19 @@ static int idx = -1;
         }
        queue<Node*> Q;
        Q.push(root);
+       Q.push(NULL);
 
        while(!Q.empty()){
         Node* curr = Q.front();
         Q.pop();
-        cout<<curr->data<<" ";
+        if(curr==NULL){
+            cout<<endl;
+          if(Q.empty()){
+            break;
+          }
+          Q.push(NULL); //To track new line
+        } else{
+             cout<<curr->data<<" ";
 
         if(curr->left != NULL){
             Q.push(curr->left);
@@ -46,7 +54,8 @@ static int idx = -1;
             Q.push(curr->right);
         }
        }
-     cout<<endl;
+    } 
+     
     }
 
 int main(){
