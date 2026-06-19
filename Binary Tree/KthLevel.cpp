@@ -1,4 +1,4 @@
-//Building tree
+
 #include<iostream>
 #include<vector>
 using namespace std;
