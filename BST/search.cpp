@@ -1,3 +1,4 @@
+//Search in BST
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -64,7 +65,7 @@ int main(){
     int arr[6]={5,1,3,4,2,7};
     Node* root=buildBST(arr,6);
     //inorder(root);
-    cout<<search(root,2);
+    cout<<search(root,12);
 
     cout<<endl;
 
