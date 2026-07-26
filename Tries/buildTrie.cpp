@@ -18,7 +18,26 @@ class Trie{
     public:
       Trie(){
         root = new Node();
-      }    
+      }   
+   void insert(string key){
+    Node* temp=root;
+
+    for(int i=0;i<key.size();i++){
+        if(temp->children.count(key[i] == 0)){
+            temp->children[key[i]] = new Node(); //Insert new key
+        }
+        temp=temp->children[key[i]];
+    }
+
+    temp->endOfword =true;
+   }  
+   
+   
+   void search(string key){
+    
+   }
+      
+
 };
 
 
