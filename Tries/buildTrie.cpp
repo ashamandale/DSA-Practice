@@ -23,7 +23,7 @@ class Trie{
     Node* temp=root;
 
     for(int i=0;i<key.size();i++){
-        if(temp->children.count(key[i] == 0)){
+        if(temp->children.count(key[i]) == 0){
             temp->children[key[i]] = new Node(); //Insert new key
         }
         temp=temp->children[key[i]];
@@ -33,16 +33,31 @@ class Trie{
    }  
    
    
-   void search(string key){
-    
+   bool search(string key){
+       Node* temp=root;
+
+    for(int i=0;i<key.size();i++){
+        if(temp->children.count(key[i])){
+           temp=temp->children[key[i]];
+        }else{
+            return false;
+        }
+    }    
+
+    return temp->endOfword ;
    }
       
-
 };
 
 
-int mian(){
+int main(){
     vector<string> words={ "the" ,"a" ," there","any","thee"};
      Trie trie;
+
+     for (string word : words) {
+        trie.insert(word);
+    }
+
+     cout<<trie.search("the")<<endl;
     return 0;
 }
