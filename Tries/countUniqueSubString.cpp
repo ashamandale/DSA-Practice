@@ -41,16 +41,15 @@ class Trie{
 int countHelper(Node* root){
     int ans=0;
 
-    for(pair<char,Node*>) child : root->children{
+    for(pair<char,Node*> child : root->children){
         ans+= countHelper(child.second);
     }
     return ans+1;
 }
 
 int countNodes(){
-    return
+    return countHelper(root);
 }
-
 
 };  
 
