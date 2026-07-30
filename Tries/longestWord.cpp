@@ -33,7 +33,7 @@ class Trie{
    }  
 
 
-   void longestHelper(Node* root,string ans, string temp){
+   void longestHelper(Node* root,string &ans, string temp){
     for(pair<char,Node*> child: root->children){
         
         if(child.second->endOfword){
@@ -42,7 +42,7 @@ class Trie{
         if((temp.size() == ans.size() && temp < ans) || (temp.size() > ans.size())){
             ans=temp;
         }
-        
+
         longestHelper(child.second,ans,temp);
         temp=temp.substr(0,temp.size()-1);
         }
