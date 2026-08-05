@@ -1,3 +1,5 @@
+//count distinct
+
 #include<iostream>
 #include<vector>
 #include<string>
@@ -24,3 +26,4 @@ int main(){
     cout<<"count :"<<countDistinct(arr)<<endl;
     return 0;
 }
+
