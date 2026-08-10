@@ -1,4 +1,4 @@
-//HasMap
+//HasMap function 
 #include<iostream>
 #include<vector>
 #include<list>
